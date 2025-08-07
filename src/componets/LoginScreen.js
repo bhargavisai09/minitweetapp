@@ -36,7 +36,7 @@ const LoginScreen = () => {
         resizeMode="contain"
       />
 
-      <Text style={styles.title}>Welcome back!</Text>
+      <Text style={styles.title}>Login</Text>
 
       {/* Email Input */}
       <Text style={styles.label}>Email Address</Text>
@@ -54,10 +54,7 @@ const LoginScreen = () => {
       {/* Password Input */}
       <View style={styles.passwordRow}>
         <Text style={styles.label}>Password</Text>
-        <TouchableOpacity onPress={() => navigation.navigate('ForgotPassword')}>
-  <Text style={styles.forgotText}>Forgot Password?</Text>
-</TouchableOpacity>
-
+        
       </View>
 
       <View style={styles.inputWrapper}>
@@ -86,26 +83,13 @@ const LoginScreen = () => {
       </TouchableOpacity>
 
       {/* Divider */}
-      <Text style={styles.or}>or log in with</Text>
-
-      {/* Social Buttons */}
-      <View style={styles.socialRow}>
-        <TouchableOpacity style={[styles.socialBtn, { backgroundColor: '#3b5998' }]}>
-          <Text style={styles.socialText}>f</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={[styles.socialBtn, { backgroundColor: '#db4437' }]}>
-          <Text style={styles.socialText}>G</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={[styles.socialBtn, { backgroundColor: '#000' }]}>
-          <Text style={styles.socialText}>x</Text>
-        </TouchableOpacity>
-      </View>
+      
 
       {/* Bottom Text */}
       <View style={{ flexDirection: 'row', marginTop: hp('2%') }}>
         <Text style={styles.bottomText}>Don’t have an account? </Text>
         <TouchableOpacity onPress={() => navigation.navigate('Signup')}>
-          <Text style={styles.link}>Get started!</Text>
+          <Text style={styles.link}>Sign in </Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -130,7 +114,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: wp('6%'),
     fontWeight: '700',
-    color: '#333',
+    color: '#7d7dff',
     marginBottom: hp('3%'),
   },
   label: {
