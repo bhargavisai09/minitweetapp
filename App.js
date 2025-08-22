@@ -14,7 +14,7 @@ import LoginScreen from './src/componets/LoginScreen';
 import HomeScreen from './src/componets/HomeScreen';
 import { onAuthStateChanged } from 'firebase/auth';
 import { ActivityIndicator, View } from 'react-native';
-import { GestureHandlerRootView } from 'react-native-gesture-handler'; // ✅ Add this
+import { GestureHandlerRootView } from 'react-native-gesture-handler'; 
 import { auth } from './src/componets/Firebase';
 
 const Stack = createNativeStackNavigator();

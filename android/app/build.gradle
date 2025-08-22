@@ -88,13 +88,22 @@ android {
         versionName "1.0"
     }
     signingConfigs {
+        
         debug {
             storeFile file('debug.keystore')
             storePassword 'android'
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+        release {
+        storeFile file('my-upload-key.keystore') // Make sure this file exists in the android/app directory
+        storePassword 'bhargavi'
+        keyAlias 'my-key-alias'
+        keyPassword 'your-password-here'
     }
+    }
+
+
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
@@ -102,12 +111,12 @@ android {
         release {
             // Caution! In production, you need to generate your own keystore file.
             // see https://reactnative.dev/docs/signed-apk-android.
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
-}
+
 
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
@@ -118,4 +127,5 @@ dependencies {
     } else {
         implementation jscFlavor
     }
+}
 }

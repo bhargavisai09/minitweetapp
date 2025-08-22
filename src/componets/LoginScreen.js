@@ -9,7 +9,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import { useNavigation } from '@react-navigation/native';
 
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from './Firebase'; // ✅ Adjust the path if needed
+import { auth } from './Firebase'; 
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
@@ -31,14 +31,14 @@ const LoginScreen = () => {
   return (
     <View style={styles.container}>
       <Image
-        source={require('../componets/assets/logo.png')} // 🔁 Replace with your logo path
+        source={require('../componets/assets/logo.png')} 
         style={styles.logo}
         resizeMode="contain"
       />
 
       <Text style={styles.title}>Login</Text>
 
-      {/* Email Input */}
+    
       <Text style={styles.label}>Email Address</Text>
       <View style={styles.inputWrapper}>
         <TextInput
@@ -51,7 +51,7 @@ const LoginScreen = () => {
         <Icon name="chevron-down" size={wp('5%')} color="#ccc" />
       </View>
 
-      {/* Password Input */}
+      
       <View style={styles.passwordRow}>
         <Text style={styles.label}>Password</Text>
         
@@ -74,7 +74,7 @@ const LoginScreen = () => {
         </TouchableOpacity>
       </View>
 
-      {/* Login Button */}
+    
       <TouchableOpacity
         style={styles.loginButton}
         onPress={handleLogin}
@@ -82,10 +82,10 @@ const LoginScreen = () => {
         <Text style={styles.LoginButtonText}>Log in</Text>
       </TouchableOpacity>
 
-      {/* Divider */}
+    
       
 
-      {/* Bottom Text */}
+    
       <View style={{ flexDirection: 'row', marginTop: hp('2%') }}>
         <Text style={styles.bottomText}>Don’t have an account? </Text>
         <TouchableOpacity onPress={() => navigation.navigate('Signup')}>
